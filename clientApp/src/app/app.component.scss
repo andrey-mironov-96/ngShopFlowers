@@ -1,3 +1,15 @@
-:root {
-    --main-color: #80b100;
-  }
+.block__row {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.block__element{
+    background: aquamarine;
+    top: 121px;
+    position: absolute;
+    left: 1200px;
+}
+footer{
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+ }

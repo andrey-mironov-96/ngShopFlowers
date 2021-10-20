@@ -1,39 +1,9 @@
-@media (max-width: 750px) {
-    .menu-item {
-        text-align: center;
-      }
-      .logo img {
-        height: 50px;
-        position: relative;
-        text-align: center;
-      }
-      .logo-text {
-          position: absolute;
-          top: 28px;
-          left: 8px;
-          color: var(--color);
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-        .cart-count {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            background: var(--color);
-            top: 15px;
-            left: 14px;
-            z-index: 1;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 12px;
-            line-height: 20px;
-          }
-  }
 .user {
   margin: 16px 0 15px 0;
 }
 .header {
     background-color: beige;
+    border-radius: 5px;
   }
 .logo img {
   height: 50px;

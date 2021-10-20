@@ -1,7 +1,14 @@
+.wrap{
+  display: inline-block;
+  position: relative;
+}
 .filter {
+  position: absolute;
   border: 1px solid var(--border);
   border-radius: 5px;
   background-color: #fcfcfc;
+  width: 170px;
+  top: 15px;
 }
 
 .filter-title {
