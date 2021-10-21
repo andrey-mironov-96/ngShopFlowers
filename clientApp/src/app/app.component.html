@@ -1,17 +1,10 @@
-<div class="container">
-  <div class="block">
-    <div class="block__row">
-      <div>
-        <app-header></app-header>
-        <app-content></app-content>
-      </div>
-      <div class="block__element">
-        <app-filter></app-filter>
-      </div>
-    </div>
-  </div>
-</div>
-<footer>asdadadd</footer>
+<div class="container-fluid">
+<app-header></app-header>
+<!-- <app-products></app-products> -->
+<router-outlet></router-outlet> 
 
-<!-- <router-outlet></router-outlet> 
-<footer class="main-footer"> <p>Все права защищены. Сайт создан в рамках лабораторной работы</p></footer> -->
+<app-footer></app-footer>
+</div>
+
+
+

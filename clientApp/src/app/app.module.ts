@@ -5,17 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
-import { FilterComponent } from './filter/filter.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './product/product.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { ItemPaginationComponent } from './item-pagination/item-pagination.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
+import { BasketComponent } from './basket/basket.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContentComponent,
-    FilterComponent,
-    FooterComponent
+    ProductsComponent,
+    ProductComponent,
+    PaginationComponent,
+    ItemPaginationComponent,
+    FooterComponent,
+    ProductInfoComponent,
+    BasketComponent,
   ],
   imports: [
     BrowserModule,
