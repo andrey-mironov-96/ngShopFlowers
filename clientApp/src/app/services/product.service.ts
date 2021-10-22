@@ -8,21 +8,18 @@ import { IProduct } from '../models/product';
 export class ProductService {
   constructor(private http: HttpClient) {}
 
-  getProducts(): Array<IProduct> {
-    let data: Array<IProduct> = [];
-    this.http.get<Array<IProduct>>('http://fowers/read_products.php').subscribe(
-      (response) => {
-        console.log(response);
-        data.push(...response);
-      },
-      (error) => console.log(error)
+  getProducts(page: number) {
+    return this.http.get<IProduct[]>(
+      `http://fowers/read_products.php/?page=${page}`
     );
-    return data;
   }
 
   getProduct(idProduct: number) {
-   return this.http
-      .get<IProduct[]>(`http://fowers/read_product.php/?id=${idProduct}`)
-     
+    return this.http.get<IProduct[]>(
+      `http://fowers/read_product.php/?id=${idProduct}`
+    );
+  }
+  getCountPages() {
+    return this.http.get<number>(`http://fowers/get_total_pages.php`);
   }
 }

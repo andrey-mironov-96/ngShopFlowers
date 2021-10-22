@@ -9,16 +9,37 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductsComponent implements OnInit {
   products: Array<IProduct> = [];
-  pageOfItems: Array<IProduct> = [];
+  countPages: number = 0;
+  currentPage: number = 1;
   constructor(private productService: ProductService) {
-     this.products = this.productService.getProducts();
+     this.productService.getCountPages().subscribe(response => {
+      this.countPages = response;
+     });
+    this.getProductsOfPage(this.currentPage);
      
   }
  
   ngOnInit(): void {}
 
-  onChangePage(pageOfItems: Array<any>) {
-    // update current page of items
-    this.pageOfItems = pageOfItems;
-}
+  getProductsOfPage(page: number){
+    this.productService.getProducts(page)
+      .subscribe(response => {
+        this.products = response;
+      })
+      this.currentPage = page;
+  }
+
+  previousPage(){
+    if (this.currentPage != 1){
+      this.getProductsOfPage(this.currentPage - 1);
+    }
+  }
+
+  nextPage(){
+    if (this.currentPage != this.countPages){
+      this.getProductsOfPage(this.currentPage + 1);
+    }
+  }
+
+
 }

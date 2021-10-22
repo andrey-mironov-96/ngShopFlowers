@@ -15,6 +15,7 @@ import { BasketComponent } from './basket/basket.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { JwPaginationModule } from 'jw-angular-pagination';
+import { PreventDefaultDirective } from './directives/preventDefault.directive';
 
 
 
@@ -29,6 +30,7 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     FooterComponent,
     ProductInfoComponent,
     BasketComponent,
+    PreventDefaultDirective
   ],
   imports: [
     BrowserModule,
