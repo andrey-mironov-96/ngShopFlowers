@@ -7,4 +7,13 @@
     </div>
   </section>
 </main>
-<app-pagination></app-pagination>
+<nav class="d-flex justify-content-center wow fadeIn">
+  <ul class="pagination pg-blue">
+      <li class="page-item disabled">
+          <a href="#" class="page-ling" aria-label="Previous">
+              <!-- <span aria-hidden="true">&laquo;</span> -->
+              <jw-pagination [items]="products" (changePage)="onChangePage($event)"></jw-pagination>
+          </a>
+      </li>
+  </ul>
+</nav>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IProduct } from '../models/product';
 
 @Component({
   selector: 'app-pagination',
@@ -6,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit {
-  pageSize: number = 10;
-  maxPage: any;
-  initialPage : number = 1;
   pageOfItems: Array<any> = [];
+
+  @Input() items: IProduct[] = [];
   constructor() { }
 
   ngOnInit(): void {
+    
+    
   }
-
+ 
 }

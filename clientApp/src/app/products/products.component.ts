@@ -9,10 +9,16 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductsComponent implements OnInit {
   products: Array<IProduct> = [];
+  pageOfItems: Array<IProduct> = [];
   constructor(private productService: ProductService) {
      this.products = this.productService.getProducts();
      
   }
  
   ngOnInit(): void {}
+
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
+}
 }

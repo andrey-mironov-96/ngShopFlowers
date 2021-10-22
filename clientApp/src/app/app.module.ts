@@ -29,14 +29,14 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     FooterComponent,
     ProductInfoComponent,
     BasketComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    JwPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
