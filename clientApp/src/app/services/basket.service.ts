@@ -8,7 +8,13 @@ export class BasketService {
   key: string = 'shop-flowers';
   constructor() {}
 
-  getProducts() {}
+  getProducts(): IBasket[] | null {
+    const strLocalStorage: string | null = localStorage.getItem(this.key);
+    if (strLocalStorage && strLocalStorage.length > 0) {
+      return JSON.parse(strLocalStorage) as IBasket[];
+    }
+    return null;
+  }
 
   setProduct(productBasket: IBasket) {
     const strLocalStorage: string | null = localStorage.getItem(this.key);
@@ -34,7 +40,7 @@ export class BasketService {
     }
     localStorage.setItem(this.key, JSON.stringify(productsInBasket));
   }
-  getCountProductsInBasket() : number {
+  getCountProductsInBasket(): number {
     const strLocalStorage: string | null = localStorage.getItem(this.key);
     if (strLocalStorage && strLocalStorage.length > 0) {
       return (JSON.parse(strLocalStorage) as IBasket[]).length;
