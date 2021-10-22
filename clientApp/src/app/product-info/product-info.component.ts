@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IBasket } from '../models/basket';
 import { IProduct } from '../models/product';
+import { BasketService } from '../services/basket.service';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -15,9 +17,12 @@ export class ProductInfoComponent implements OnInit {
     description: 'no description',
     price: 0
   };
+
+  count = "1";
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private basketService: BasketService
   ) {}
 
   ngOnInit(): void {
@@ -32,5 +37,15 @@ export class ProductInfoComponent implements OnInit {
       },
       (error) => console.log(error)
     );
+  }
+  addToBasket(){
+    let basket: IBasket = {
+      
+      product: this.product.name,
+      price: this.product.price,
+      count: +this.count
+    }
+    console.log(basket);
+    this.basketService.setProduct(basket);  
   }
 }

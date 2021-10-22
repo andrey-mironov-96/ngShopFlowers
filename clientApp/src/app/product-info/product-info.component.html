@@ -34,10 +34,15 @@
               min="1"
               max="100"
               style="width: 100px"
+              [(ngModel)]="count" 
+              [ngModelOptions]="{standalone: true}"
             />
+           
             <button
               class="btn btn-primary btn-md my-0 p"
               style="margin-left: 5px"
+              (click)="addToBasket()"
+              type="button"
             >
               Add to cart <i class="fa fa-shopping-cart mr-1"></i>
             </button>

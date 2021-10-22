@@ -1,7 +1,7 @@
 
 
 export interface IBasket{
-    index:number;
+    index?:number;
     product: string;
     count: number;
     price: number;

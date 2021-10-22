@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { BasketComponent } from './basket/basket.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { JwPaginationModule } from 'jw-angular-pagination';
 
 
 
@@ -27,12 +29,14 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ProductInfoComponent,
     BasketComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
