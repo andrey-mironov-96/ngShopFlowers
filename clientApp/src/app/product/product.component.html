@@ -1,19 +1,16 @@
-<div class="card">
+<div class="card" [routerLink]="['/product', product.id]">
   <div class="view overlay">
     <img class="card-img-top" src="./../../assets/flower.png" alt="img" />
     <a href="">
       <div class="mask rgba-white-slight"></div>
     </a>
   </div>
-
   <div class="card-body text-center">
-    <a href="#" class="grey-text">
-      <h5>T-shirt</h5>
-    </a>
+    <h5 class="grey-text">{{ product.name }}</h5>
 
     <h5>
       <strong>
-        <a href="#" class="dark-grey-text">110 Руб. </a>
+        <a href="#" class="dark-grey-text">{{ product.price }} Руб. </a>
       </strong>
     </h5>
   </div>

@@ -12,6 +12,7 @@ import { ItemPaginationComponent } from './item-pagination/item-pagination.compo
 import { FooterComponent } from './footer/footer.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { BasketComponent } from './basket/basket.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -30,7 +31,8 @@ import { BasketComponent } from './basket/basket.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
